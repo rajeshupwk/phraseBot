@@ -10,17 +10,20 @@
       <label class="error">
       </label>
     </div>
-    <% if @phrase %>
+    <% if @phrases %>
       <div class="row">
         <label class="control-label col-sm-3" for="pwd"><strong>Title</strong></label>
         <div class="col-sm-9">          
           <label class="control-label"><strong>Description</strong></label>
         </div>
       </div>
-      <div class="row" id="more-phrase" data-ids="<%= @phrase.id%>">
-        <div class="col-sm-3"><%= @phrase.title %></div>
-        <div class="col-sm-9"><%= @phrase.description%></div>
-      </div> 
+
+      <div class="row" id="more-phrase" data-ids="<%= @dataexclude %>">
+        <% @phrases.each do |phrase| %>
+          <div class="col-sm-3"><%= phrase.title %></div>
+          <div class="col-sm-9"><%= phrase.description%></div>
+        <% end %> 
+      </div>
       <br>
       <div class="row">
         <div class="col-sm-2"></div>
