@@ -1,0 +1,18 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: phrasesbot_dev
+  pool: 5
+  host: localhost
+  port: 5432
+  username: rails
+  password: rails
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: phrasesbot_test
+  pool: 5
+  username: rails
+  password: rails
+  
