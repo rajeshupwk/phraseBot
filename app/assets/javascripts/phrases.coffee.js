@@ -1,13 +1,13 @@
 $( document ).ready(function() {
   $("#load_phrase").click(function() {
-    fetchPhrase()  ;
+    fetchPhrase();
   });
 
   function fetchPhrase() {
     var val = $('#more-phrase').data('ids');
     var exclude = val.toString();
     $.ajax({
-      type : "POST",
+      type : "GET",
       url:"/fetch_phrase",
       data: {exclude: exclude.split(',')},
       success: function(data) {
