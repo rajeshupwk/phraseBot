@@ -6,31 +6,28 @@
       </div>
     </div>
     <hr>  
-    <div class="row">
+    <div class="row text-center">
       <label class="error">
       </label>
     </div>
     <% if @phrases %>
-      <div class="row">
+      <div class="row text-center">
         <label class="control-label col-sm-3" for="pwd"><strong>Title</strong></label>
         <div class="col-sm-9">          
           <label class="control-label"><strong>Description</strong></label>
         </div>
       </div>
 
-      <div class="row" id="more-phrase" data-ids="<%= @dataexclude %>">
+      <div class="row text-center" id="more-phrase" data-ids="<%= @dataexclude %>">
         <% @phrases.each do |phrase| %>
           <div class="col-sm-3"><%= phrase.title %></div>
           <div class="col-sm-9"><%= phrase.description%></div>
         <% end %> 
       </div>
       <br>
-      <div class="row">
-        <div class="col-sm-2"></div>
-        <div class="col-sm-10">
-          <div class="btn btn-primary" id= 'load_phrase'>
+      <div class="row text-center">
+        <div class="btn btn-primary" id= 'load_phrase'>
             <%= "Load #{@total_phrases} more"%>
-          </div> 
         </div>
       </div>
     <% else %>
